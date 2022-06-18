@@ -1,5 +1,6 @@
 package service;
 
+import exception.InvalidDataException;
 import model.EmployeeRequest;
 
 public abstract class RequestExecutor<T> {
@@ -19,7 +20,7 @@ public abstract class RequestExecutor<T> {
 
     public abstract Boolean checkRequestExists(EmployeeRequest employeeRequest);
 
-    public abstract void validateData(EmployeeRequest employeeRequest);
+    public abstract void validateData(EmployeeRequest employeeRequest) throws InvalidDataException;
 
     public abstract T extractData(EmployeeRequest employeeRequest);
 
