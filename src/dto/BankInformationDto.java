@@ -22,4 +22,12 @@ public class BankInformationDto {
     public void setBankInformation(BankInformation bankInformation) {
         this.bankInformation = bankInformation;
     }
+
+    @Override
+    public String toString() {
+        return "BankInformationDto{" +
+                "employeeId='" + employeeId + '\'' +
+                ", bankInformation=" + bankInformation +
+                '}';
+    }
 }

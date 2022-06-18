@@ -21,4 +21,12 @@ public class PersonalInformationDto {
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
+
+    @Override
+    public String toString() {
+        return "PersonalInformationDto{" +
+                "employeeId='" + employeeId + '\'' +
+                ", employee=" + employee +
+                '}';
+    }
 }

@@ -37,4 +37,14 @@ public class BankInformation {
     public void setBranchCode(String branchCode) {
         this.branchCode = branchCode;
     }
+
+    @Override
+    public String toString() {
+        return "BankInformation{" +
+                "accountNo='" + accountNo + '\'' +
+                ", bankName='" + bankName + '\'' +
+                ", branchName='" + branchName + '\'' +
+                ", branchCode='" + branchCode + '\'' +
+                '}';
+    }
 }

@@ -28,4 +28,13 @@ public class EmployeeRequest {
     public void setBankInformation(BankInformation bankInformation) {
         this.bankInformation = bankInformation;
     }
+
+    @Override
+    public String toString() {
+        return "EmployeeRequest{" +
+                "employeeId='" + employeeId + '\'' +
+                ", employee=" + employee +
+                ", bankInformation=" + bankInformation +
+                '}';
+    }
 }

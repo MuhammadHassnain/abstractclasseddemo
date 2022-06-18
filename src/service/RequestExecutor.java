@@ -6,6 +6,7 @@ import model.EmployeeRequest;
 public abstract class RequestExecutor<T> {
 
     public void execute(EmployeeRequest employeeRequest) {
+        System.out.printf("----Processing Request----%n");
         if (checkRequestExists(employeeRequest)) {
             validateData(employeeRequest);
             T data = extractData(employeeRequest);
@@ -15,7 +16,7 @@ public abstract class RequestExecutor<T> {
 
     public void sendRequest(T data) {
         String URL = this.getURI();
-        System.out.printf("Sending Data %s to %s%n", data.toString(), URL);
+        System.out.printf("----Sending Data %s to %s%n%n%n", data.toString(), URL);
     }
 
     public abstract Boolean checkRequestExists(EmployeeRequest employeeRequest);
